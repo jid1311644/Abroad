@@ -13,7 +13,7 @@ public abstract class BaseDAO {
 	public BaseDAO() {
 		// TODO Auto-generated constructor stub
 		this.driver = "com.mysql.cj.jdbc.Driver";
-		this.url = "jdbc:mysql://localhost:3306/study_abroad";
+		this.url = "jdbc:mysql://localhost:3306/study_abroad?useSSL=false&allowPublicKeyRetrieval=true";
 		this.user = "root";
 		this.password = "Jellal20143647";
 	}

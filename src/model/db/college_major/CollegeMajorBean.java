@@ -4,7 +4,7 @@ public class CollegeMajorBean {
 	
 	private String collegeId;	//college_id 院校编号
 	private String majorId;		//majoe_id 专业编号
-	private String grade;		//grade 该专业在该院校的等级：A、B、M、D
+	private String degree;		//degree : A、B、M、D
 	
 	
 	public String getCollegeId() {
@@ -19,11 +19,11 @@ public class CollegeMajorBean {
 	public void setMajorId(String majorId) {
 		this.majorId = majorId;
 	}
-	public String getGrade() {
-		return grade;
+	public String getDegree() {
+		return degree;
 	}
-	public void setGrade(String grade) {
-		this.grade = grade;
+	public void setDegree(String degree) {
+		this.degree = degree;
 	}
 
 }

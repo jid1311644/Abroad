@@ -1,5 +1,8 @@
 package model.db.major;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+
 public class MajorBean {
 	
 	private String majorId;	//major_id 专业编号
@@ -8,6 +11,56 @@ public class MajorBean {
 	private String type;	//type 专业所属类型
 	private Integer hot;	//hot 专业热度
 	
+	public HashMap<String, String> getHotMajors() {
+		HashMap<String, String> map = new HashMap<String, String>();
+		String sql = "select name, type from major order by hot desc";
+		LinkedList<MajorBean> mbs = (LinkedList<MajorBean>) new MajorDAO().query(sql);
+		if(mbs == null || mbs.isEmpty()) {
+			return null;
+		}
+		else {
+			int count = 0;
+			while(!mbs.isEmpty() && count < 10) {
+				MajorBean mb = mbs.poll();
+				map.put((count++) + "", mb.getName() + " " + mb.getType());
+			}
+		}
+		return map;
+	}
+	
+	public HashMap<String, String> getAllMajors() {
+		HashMap<String, String> map = new HashMap<String, String>();
+		String sql = "select name from major order by name";
+		LinkedList<MajorBean> mbs = (LinkedList<MajorBean>) new MajorDAO().query(sql);
+		if(mbs == null || mbs.isEmpty()) {
+			return null;
+		}
+		else {
+			int count = 0;
+			while(!mbs.isEmpty()) {
+				MajorBean mb = mbs.poll();
+				map.put((count++) + "", mb.getName());
+			}
+		}
+		return map;
+	}
+	
+	public HashMap<String, String> getMajorDetail(String majorId) {
+		HashMap<String, String> map = new HashMap<String, String>();
+		String sql = "select * from major where major_id = '" + majorId + "'";
+		LinkedList<MajorBean> mbs = (LinkedList<MajorBean>) new MajorDAO().query(sql);
+		if(mbs == null || mbs.isEmpty()) {
+			return null;
+		}
+		else {
+			MajorBean mb = mbs.poll();
+			map.put("name", mb.getName());
+			map.put("info", mb.getInfo());
+			map.put("type", mb.getType());
+			map.put("hot", mb.getHot() + "");
+		}
+		return map;
+	}
 	
 	public String getMajorId() {
 		return majorId;

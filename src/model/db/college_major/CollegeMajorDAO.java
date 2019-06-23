@@ -33,8 +33,8 @@ public class CollegeMajorDAO  extends BaseDAO {
 					case "major_id":
 						collegeMajorBean.setMajorId(rs.getString(i + 1));
 						break;
-					case "grade":
-						collegeMajorBean.setGrade(rs.getString(i + 1));
+					case "degree":
+						collegeMajorBean.setDegree(rs.getString(i + 1));
 						break;
 					default:
 						break;

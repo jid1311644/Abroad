@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+	    <meta charset="UTF-8">     <!--配置编码方式-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">  <!--配置视窗，设备宽度,禁止用户缩放-->
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>用户注册</title>
+	    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+	    <link rel="stylesheet" href="css/regist.css"/>
+	    <link rel="stylesheet" href="css/home-page.css"/>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top"><!--导航在最上面-->
+	        <div class="container">
+	        	<!--小屏幕导航栏和logo-->
+	        	<div class="navbar-header">
+	        		<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		        	</button>
+		        	<a href="index.html" class="navbar-brand">FindIt</a> 
+	        	</div> 	
+	        	<!--小屏幕导航栏和logo-->
+	        	<!--导航，在单独的容器层-->
+	        	<div class="navbar-collapse collapse">
+			    	<ul class="nav navbar-nav navbar-right">
+			    	<li><a href="Infomation.html">个人信息</a></li>
+		    		<li><a href="school.html">学校</a></li>
+		    		<li><a href="major.html">专业</a></li>
+		    		<li><a href="guide.html">使用指南</a></li>
+		    		<li><a href="contact.html">联系我们</a></li>
+			    	</ul>
+	    		</div>
+	    		<!--导航-->
+	        </div>
+	    </nav>
+		<div class="regist">
+			<p class="logo">注册账号</p>
+			<hr style="border" />	
+			<div class="information">
+				<form action="regist.action" name="RegistForm" class="form-signin">
+					<div class="col-lg-6">
+						<div class="input-group input-group-lg space-line">
+						  <span class="input-group-addon" id="sizing-addon1">电子邮箱</span>
+						  <input type="email" name="email" class="form-control" placeholder="请输入电子邮箱" aria-describedby="sizing-addon1">
+						</div>
+						<div class="input-group input-group-lg space-line">
+						  <span class="input-group-addon" id="sizing-addon1">设置密码</span>
+						  <input type="password" name="password" class="form-control" placeholder="请输入密码" aria-describedby="sizing-addon1">
+						</div>
+						<div class="input-group input-group-lg space-line">
+					  		<span class="input-group-addon" id="sizing-addon1">确认密码</span>
+					  		<input type="password" name="rePassword" class="form-control" placeholder="再次输入密码" aria-describedby="sizing-addon1">
+						</div>
+						<button class="btn btn-primary" type="submit">确认提交</button>
+						<!-- <p><a href="#" class="btn btn-primary" role="button">确认提交</a></p> -->
+  					</div><!-- /.col-lg-6 -->
+				</form>
+				<div class="note">
+					
+				</div>	
+			</div>
+		</div>
+		<div class="page-footer">
+		     内容区域
+		</div>
+	</body>
+</html>

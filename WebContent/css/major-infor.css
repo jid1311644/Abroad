@@ -1,0 +1,22 @@
+.panel{
+	width: 80%;
+	margin: 10px auto;
+	float: none;
+}
+.image{
+	
+}
+.txt{
+	text-align: left;
+	font: "微软雅黑" 7px;
+}
+#major-detail{
+	margin-top: 70px;
+	background: url(../img/major-detail.jpg);
+	background-size: cover;
+	color: #ffffff;
+	text-align: center;
+	width: 100%;
+	height: 350px;
+}
+

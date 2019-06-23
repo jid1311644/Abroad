@@ -1,0 +1,78 @@
+body{
+	font-family: "microsoft yahei",sans-serif;
+	height: auto;
+}
+.navbar-default{
+	background-color: #fff;
+    border: none;
+    box-shadow: 0px 2px 8px 0px rgba(50,50,50,0.88);
+}
+.navbar .navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    color: #b24916;
+    height: 70px;
+    line-height: 35px;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #666;
+    font-size: 16px;
+    height: 70px;
+    line-height: 35px;
+    font-weight: bold;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #1a7660;
+}
+#home{
+	margin-top: 70px;
+	background: url(../img/index.jpg);
+	background-size: cover;
+	color: #ffffff;
+	text-align: center;
+	width: 100%;
+	height: 350px;
+}
+.lvjing{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	padding: 90px 0;
+}
+#home h1{
+	font-weight: bold;
+	margin-top: 0;
+}
+#home p{
+	font-weight: 400;
+	line-height: 35px;
+}
+#home img{
+	margin-top: 30px;
+	display: inline-block;
+}
+.page-footer{
+	height: 300px;
+	background-color: rgba(0,0,0,0.8);
+}
+.center{
+	vertical-align: middle;
+	text-align:center;
+	margin:10px auto;
+}
+.features{
+	background-color: #f8f7f5;
+	height: 600px;
+}
+.one-fearure{
+	height: 400px;
+	margin-top: 80px;
+	margin-left: 100px;
+	width: 250px;
+	/*background-color: gainsboro;*/
+	display: inline-block;
+	float: left;
+}
+.explain{
+	height: 30px;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+	    <meta charset="UTF-8">     <!--配置编码方式-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">  <!--配置视窗，设备宽度,禁止用户缩放-->
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>用户信息维护</title>
+	    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+	    <link rel="stylesheet" href="css/information.css"/>
+	    <link rel="stylesheet" href="css/home-page.css"/>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top"><!--导航在最上面-->
+	        <div class="container">
+	        	<!--小屏幕导航栏和logo-->
+	        	<div class="navbar-header">
+	        		<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		        	</button>
+		        	<a href="index.html" class="navbar-brand">FindIt</a> 
+	        	</div> 	
+	        	<!--小屏幕导航栏和logo-->
+	        	<!--导航，在单独的容器层-->
+	        	<div class="navbar-collapse collapse">
+			    	<ul class="nav navbar-nav navbar-right">
+			    	<li><a href="Infomation.html">个人信息</a></li>
+		    		<li><a href="school.html">学校</a></li>
+		    		<li><a href="major.html">专业</a></li>
+		    		<li><a href="guide.html">使用指南</a></li>
+		    		<li><a href="contact.html">联系我们</a></li>
+			    	</ul>
+	    		</div>
+	    		<!--导航-->
+	        </div>
+	    </nav>
+		<div class="regist">
+			<p class="logo">个人信息</p>
+			<hr style="border" />	
+			<div class="information">
+				<form action="modifyInformation.action" name="InfoForm" class="form-signin">
+					<div class="col-lg-6">
+						<div class="input-group input-group-lg space-line">
+						  <span class="input-group-addon" id="sizing-addon1">性别</span>
+						  <input type="text" name="sex" class="form-control" placeholder="请输入“男”或“女”" aria-describedby="sizing-addon1">
+						</div>
+						<div class="input-group input-group-lg space-line">
+						  <span class="input-group-addon" id="sizing-addon1">学历</span>
+						  <input type="text" name="education" class="form-control" placeholder="请输入学历" aria-describedby="sizing-addon1">
+						</div>
+						<div class="input-group input-group-lg space-line">
+						  <span class="input-group-addon" id="sizing-addon1">当前学校</span>
+						  <input type="text" name="schoolName" class="form-control" placeholder="请输入学校名" aria-describedby="sizing-addon1">
+						</div>
+						<div class="input-group input-group-lg space-line">
+						  <span class="input-group-addon" id="sizing-addon1">地址</span>
+						  <input type="text" name="address" class="form-control" placeholder="请输入您的地址" aria-describedby="sizing-addon1">
+						</div>
+						<div class="input-group input-group-lg space-line">
+					  		<span class="input-group-addon" id="sizing-addon1">GPA</span>
+					  		<input type="text" name="gpa" class="form-control" placeholder="请输入GPA" aria-describedby="sizing-addon1">
+						</div>
+						<div class="input-group input-group-lg space-line">
+					  		<span class="input-group-addon" id="sizing-addon1">考试类型</span>
+					  		<input type="text" name="testType" class="form-control" placeholder="请输入考试类型" aria-describedby="sizing-addon1">
+						</div>
+						<div class="input-group input-group-lg space-line">
+					  		<span class="input-group-addon" id="sizing-addon1">考试成绩</span>
+					  		<input type="text" name="score" class="form-control" placeholder="请输入考试成绩" aria-describedby="sizing-addon1">
+						</div>
+						<button class="btn btn-primary" type="submit">确认提交</button>
+						<!-- <p><a href="#" class="btn btn-primary" role="button">确认提交</a></p> -->
+  					</div><!-- /.col-lg-6 -->
+				</form>
+				<div class="note">
+					
+				</div>	
+			</div>
+		</div>
+		<div class="recommend">
+			<h2>为你推荐</h2>
+			<div class="thumbnail">
+				<a href="#">
+					<img class="images" src="img/harword.jpg" alt="校园">
+				</a>
+			    <a href="#">
+			    	<div class="caption">
+				       <p>Thumbnail label</p> 
+			       	</div>
+			    </a>    
+			</div>
+			<div class="thumbnail">
+				<a href="#">
+					<img class="images" src="img/harword.jpg" alt="校园">
+				</a>
+			    <a href="#">
+			    	<div class="caption">
+				       <p>Thumbnail label</p> 
+			       	</div>
+			    </a>    
+			</div>
+			<div class="thumbnail">
+				<a href="#">
+					<img class="images" src="img/harword.jpg" alt="校园">
+				</a>
+			    <a href="#">
+			    	<div class="caption">
+				       <p>Thumbnail label</p> 
+			       	</div>
+			    </a>    
+			</div>
+			<div class="thumbnail">
+				<a href="#">
+					<img class="images" src="img/harword.jpg" alt="校园">
+				</a>
+			    <a href="#">
+			    	<div class="caption">
+				       <p>Thumbnail label</p> 
+			       	</div>
+			    </a>    
+			</div>
+			<div class="thumbnail">
+				<a href="#">
+					<img class="images" src="img/harword.jpg" alt="校园">
+				</a>
+			    <a href="#">
+			    	<div class="caption">
+				       <p>Thumbnail label</p> 
+			       	</div>
+			    </a>    
+			</div>
+			<div class="thumbnail">
+				<a href="#">
+					<img class="images" src="img/harword.jpg" alt="校园">
+				</a>
+			    <a href="#">
+			    	<div class="caption">
+				       <p>Thumbnail label</p> 
+			       	</div>
+			    </a>    
+			</div>
+		</div>
+		<div class="page-footer">
+		     内容区域
+		</div>
+	</body>
+</html>

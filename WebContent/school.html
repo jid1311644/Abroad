@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<html>
+	<head>
+		<meta charset="UTF-8">     <!--配置编码方式-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">  <!--配置视窗，设备宽度,禁止用户缩放-->
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>学校信息</title>
+	    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+	    <link rel="stylesheet" href="css/school.css"/>
+	    <link rel="stylesheet" href="css/home-page.css"/>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top"><!--导航在最上面-->
+	        <div class="container">
+	        	<!--小屏幕导航栏和logo-->
+	        	<div class="navbar-header">
+	        		<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		        	</button>
+		        	<a href="index.html" class="navbar-brand">FindIt</a> 
+	        	</div> 	
+	        	<!--小屏幕导航栏和logo-->
+	        	<!--导航，在单独的容器层-->
+	        	<div class="navbar-collapse collapse">
+			    	<ul class="nav navbar-nav navbar-right">
+			    	<li><a href="Infomation.html">个人信息</a></li>
+		    		<li><a href="school.html">学校</a></li>
+		    		<li><a href="major.html">专业</a></li>
+		    		<li><a href="guide.html">使用指南</a></li>
+		    		<li><a href="contact.html">联系我们</a></li>
+			    	</ul>
+	    		</div>
+	    		<!--导航-->
+	        </div>
+	    </nav>
+	    <!--banner开始-->
+	    <div class="banner">
+	    	<div class="row">
+	  			<div class="col-lg-12">
+	  				<div class="space">
+	  					<h2 class="center">搜索学校</h2>
+			        	<div class="input-group" "center">
+				     		<input type="text" class="form-control" placeholder="Search for...">
+				      		<span class="input-group-btn">
+				        		<button class="btn btn-default" type="button">Search</button>
+				     		</span>
+			   		 	</div><!-- /input-group -->
+	  				</div>
+	    		</div><!-- /.col-lg-6 -->
+    		</div><!-- /.row -->
+	    </div><!--banner结束-->
+	    <!--筛选条件-->
+		<div class="condition">
+			<br/><h3>选择条件</h3><br/><br/>
+			<label><p>学制</p></label><br />
+		   <label class="checkbox-inline">
+		      <input type="radio" name="length" id="short" 
+		         value="option1" checked>4年
+		   </label><br />
+		   <label class="checkbox-inline">
+		      <input type="radio" name="length" id="middle" 
+		         value="option2"> 2-4年
+		   </label><br />
+		   <label class="checkbox-inline">
+		      <input type="radio" name="length" id="long" 
+		         value="option3"> 2年以内
+		   </label><br /><br />
+		   <label><p>办学类型</p></label><br />
+		   <label class="checkbox-inline">
+		      <input type="radio" name="type" id="public" 
+		         value="option1"> 公立
+		   </label><br />
+		   <label class="checkbox-inline">
+		      <input type="radio" name="type" id="private" 
+		         value="option2"> 私立
+		   </label><br /><br />
+		   <label><p>学费</p></label><br />
+		   <label class="checkbox-inline">
+		      <input type="radio" name="price" id="lowest" 
+		         value="option1"> $40000以下
+		   </label><br />
+		   <label class="checkbox-inline">
+		      <input type="radio" name="price" id="low" 
+		         value="option2"> $40000-$100000
+		   </label><br />
+		   <label class="checkbox-inline">
+		      <input type="radio" name="price" id="high" 
+		         value="option2"> $100000-$300000
+		   </label><br />
+		   <label class="checkbox-inline">
+		      <input type="radio" name="price" id="highest" 
+		         value="option2"> 不限
+		   </label><br /><br />
+		   <label><p>专业</p></label><br />
+		   <div class="dropdown">
+			  <button class="btn btn-default dropdown-toggle" "btn-style" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			    显示全部
+			    <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			  	……
+			  </ul>
+			</div><br /><br />
+			<label><p>考试类型</p></label><br />
+		    <div class="dropdown">
+			  <button class="btn btn-default dropdown-toggle" "btn-style" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			    显示全部
+			    <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			  	……
+			  </ul>
+			</div><br /><br />
+			<label><p>考试成绩</p></label><br />
+			<div class="input-group">
+  				<span class="input-group-addon" id="basic-addon1">分数</span>
+  				<input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1">
+			</div><br /><br />
+			<button type="button" class="btn btn-primary">查找</button>
+		</div><!--筛选条件结束-->
+		<div class="show">
+			<div class="dropdown">
+			  <button class="btn btn-default dropdown-toggle" "btn-style" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			    显示全部
+			    <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			  	<li role="presentation"><a role="menuitem" tabindex="-1" href="#">学费从高到底</a></li>
+     			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">学费从低到高</a></li>
+       			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">分数从高到底</a></li>
+        		<li role="presentation"><a role="menuitem" tabindex="-1" href="#">分数从低到高<</a></li>
+			  </ul>
+			</div>
+			<div class="row1">
+			    <div class="thumbnail">
+			        <img class="images" src="img/harword.jpg" alt="校园">
+				     <div class="caption">
+				        <h3>Thumbnail label</h3>
+				        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+				        <p>办学类型：公立</p>
+				        <p>学费：20000$/年</p>
+				        <p>最低录取分数</p>
+				        <p><a href="#" class="btn btn-primary" role="button">喜欢</a> <a href="#" class="btn btn-default" role="button">不喜欢</a></p>
+			       	</div>
+			  	</div>
+				<div class="thumbnail"><!--400*250-的图-->
+			        <img class="images" src="img/harword.jpg" alt="校园">
+				    <div class="caption">
+				        <h3>Thumbnail label</h3>
+				        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+				        <p>办学类型：公立</p>
+				        <p>学费：20000$/年</p>
+				        <p>最低录取分数</p>
+				        <p><a href="#" class="btn btn-primary" role="button">喜欢</a> <a href="#" class="btn btn-default" role="button">不喜欢</a></p>
+			       	</div>
+			  	</div>
+			  	<div class="thumbnail"><!--400*250-的图-->
+			        <img class="images" src="img/harword.jpg" alt="校园">
+				    <div class="caption">
+				        <h3>Thumbnail label</h3>
+				        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+				        <p>办学类型：公立</p>
+				        <p>学费：20000$/年</p>
+				        <p>最低录取分数</p>
+				        <p><a href="#" class="btn btn-primary" role="button">喜欢</a> <a href="#" class="btn btn-default" role="button">不喜欢</a></p>
+			       	</div>
+			  	</div>
+			  	<div class="thumbnail"><!--400*250-的图-->
+			        <img class="images" src="img/harword.jpg" alt="校园">
+				    <div class="caption">
+				        <h3>Thumbnail label</h3>
+				        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+				        <p>办学类型：公立</p>
+				        <p>学费：20000$/年</p>
+				        <p>最低录取分数</p>
+				        <p><a href="#" class="btn btn-primary" role="button">喜欢</a> <a href="#" class="btn btn-default" role="button">不喜欢</a></p>
+			       	</div>
+			  	</div>
+			  	<div class="thumbnail"><!--400*250-的图-->
+			        <img class="images" src="img/harword.jpg" alt="校园">
+				    <div class="caption">
+				        <h3>Thumbnail label</h3>
+				        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+				        <p>办学类型：公立</p>
+				        <p>学费：20000$/年</p>
+				        <p>最低录取分数</p>
+				        <p><a href="#" class="btn btn-primary" role="button">喜欢</a> <a href="#" class="btn btn-default" role="button">不喜欢</a></p>
+			       	</div>
+			  	</div>
+			  	<div class="thumbnail"><!--400*250-的图-->
+			        <img class="images" src="img/harword.jpg" alt="校园">
+				    <div class="caption">
+				        <h3>Thumbnail label</h3>
+				        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+				        <p>办学类型：公立</p>
+				        <p>学费：20000$/年</p>
+				        <p>最低录取分数</p>
+				        <p><a href="#" class="btn btn-primary" role="button">喜欢</a> <a href="#" class="btn btn-default" role="button">不喜欢</a></p>
+			       	</div>
+			  	</div>
+			</div>
+			<!--分页导航栏-->
+			<div class="pages">
+				<nav aria-label="Page navigation" class="center">
+				  <ul class="pagination">
+				    <li>
+				        <a href="#" aria-label="Previous">
+				        	<span aria-hidden="true">&laquo;</span>
+				        </a>
+					    </li>
+					    <li><a href="#">1</a></li>
+					    <li><a href="#">2</a></li>
+					    <li><a href="#">3</a></li>
+					    <li><a href="#">4</a></li>
+					    <li><a href="#">5</a></li>
+					    <li>
+				        <a href="#" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+			</div><!--分页导航栏-->
+		</div>
+		<!----- footer ----->
+		<div class="page-footer">
+			<div class="container">
+					
+			</div>
+		</div>
+		<!----- footer ----->
+	</body>
+	
+</html>

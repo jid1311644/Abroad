@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">     <!--配置编码方式-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">  <!--配置视窗，设备宽度,禁止用户缩放-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学校详情</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="css/home-page.css"/>
+    <link rel="stylesheet" href="css/school-info.css"/>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top"><!--导航在最上面-->
+        <div class="container">
+        	<!--小屏幕导航栏和logo-->
+        	<div class="navbar-header">
+        		<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	        		<span class="icon-bar"></span>
+	        		<span class="icon-bar"></span>
+	        		<span class="icon-bar"></span>
+	        	</button>
+	        	<a href="index.html" class="navbar-brand">FindIt</a> 
+        	</div> 	
+        	<!--小屏幕导航栏和logo-->
+        	<!--导航，在单独的容器层-->
+        	<div class="navbar-collapse collapse">
+		    	<ul class="nav navbar-nav navbar-right">
+		    		<li><a href="Infomation.html">个人信息</a></li>
+		    		<li><a href="school.html">学校</a></li>
+		    		<li><a href="major.html">专业</a></li>
+		    		<li><a href="guide.html">使用指南</a></li>
+		    		<li><a href="contact.html">联系我们</a></li>
+		    	</ul>
+    		</div>
+    		<!--导航-->
+        </div>
+    </nav>
+    <section id="school-detail">
+    	<div class="lvjing">
+    		<h1>了解学校详情</h1>
+    		<p>
+    			收藏你心仪的学校
+    		</p>
+    	</div>
+    </section>
+    <div class="info">
+    	<div class="list-group content"><!--目录-->
+		    <a href="#" class="list-group-item active">
+		    学校概况
+		    </a>
+		    <a href="#" class="list-group-item">学费</a>
+		 	<a href="#" class="list-group-item">学术水平</a>
+		    <a href="#" class="list-group-item">优势专业</a>
+		  	<a href="#" class="list-group-item">成绩要求</a>
+		</div>
+		<div class="panel panel-default detail">
+			<div class="panel-heading">
+			    <h3 class="panel-title">学校概况</h3>
+			</div>
+			<div class="panel-body">
+			    <h2>斯坦福大学</h2>
+			    <p>斯坦福大学（Stanford University），全名小利兰·斯坦福大学（Leland Stanford Junior University），简称“斯坦福（Stanford）”，位于美国加州旧金山湾区南部的帕罗奥多市（Palo Alto）境内
+			    	，临近世界著名高科技园区硅谷，是世界著名的私立研究型大学 
+			    	。斯坦福大学占地约33平方公里（8180英亩）
+			    	，是美国占地面积第六大的大学
+			    </p>
+			    <div class="image">
+			    	<img src="img/stanford.jpg" alt="斯坦福大学"></img>
+			    </div>
+			    <div class="like-btn">
+			    	<button type="button" class="btn btn-default btn-lg">
+					    <span class="glyphicon glyphicon-star" aria-hidden="true"></span> 收藏
+					</button>
+			    </div>
+			</div>
+		</div>
+    </div>
+	<div class="page-footer">
+    	
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!--jQuery的引入一定要在bootstrap之前-->
+</body>
+</html>

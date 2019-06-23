@@ -1,0 +1,55 @@
+.banner{
+	background: url(../img/school-banner.jpg);
+	background-color: rgba(0.0.0.0.5);
+	outline-color: gray;
+	outline-width:5px;
+}
+.row{
+	text-align: center;
+	margin: 70px 0px auto;
+	height: 350px;
+}
+.center{
+	vertical-align: middle;
+	text-align:center;
+	margin:10px auto;
+}
+.input-group{
+	width: 50%;
+	text-align:center;
+	margin: auto;
+}
+.condition{
+	padding-left: 50px;
+	width: 350px;
+	height: 2200px;
+	display: inline-block;
+}
+.space{
+	margin-top: 100px;
+}
+.show{
+	width: 1169px;
+	height: 2200px;
+	background-color: #f1ecec;
+	display: inline-block;
+	float: right;
+}
+.images{
+	width: 500px;
+	height: 200px;
+	background-color: gray;
+}
+.thumbnail{
+	margin:40px;
+	width:500px;
+	height: 600px;
+	display: inline-block;
+	float: left;
+}
+.dropdown{
+	margin: 20px 0px 0px 40px;
+}
+.btn-style{
+	width: 200px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">     <!--配置编码方式-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">  <!--配置视窗，设备宽度,禁止用户缩放-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find It</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>  
+    <link rel="stylesheet" href="css/home-page.css"/>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top"><!--导航在最上面-->
+        <div class="container">
+        	<!--小屏幕导航栏和logo-->
+        	<div class="navbar-header">
+        		<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	        		<span class="icon-bar"></span>
+	        		<span class="icon-bar"></span>
+	        		<span class="icon-bar"></span>
+	        	</button>
+	        	<a href="index.html" class="navbar-brand">FindIt</a> 
+        	</div> 	
+        	<!--小屏幕导航栏和logo-->
+        	<!--导航，在单独的容器层-->
+        	<div class="navbar-collapse collapse">
+		    	<ul class="nav navbar-nav navbar-right">
+		    		<li><a href="Infomation.html">个人信息</a></li>
+		    		<li><a href="school.html">学校</a></li>
+		    		<li><a href="major.html">专业</a></li>
+		    		<li><a href="guide.html">使用指南</a></li>
+		    		<li><a href="contact.html">联系我们</a></li>
+		    		<li><a href="signin.html"><button type="button" class="btn btn-danger btn-md wide">登录</button></a><li>
+		    		<li><a href="regist.html"><button type="button" class="btn btn-info btn-md wide"><span class="
+glyphicon glyphicon-user" aria-hidden="true"></span>注册</button></a><li>
+		    	</ul>
+    		</div>
+    		<!--导航-->
+        </div>
+    </nav>
+    <!--home-->
+    		<section id="home">
+    			<div class="lvjing">
+    				<h1>FindIt</h1>
+    					<p>
+    							找到最适合你的学校<br/>
+    							量身打造的专业选择
+    					</p>
+    			</div>
+    		</section>
+    <!--home-->
+    <div class="container">
+    	<div class="row features">
+    		<div class="col-md-4 one-fearure">
+    			<h3>我有可能被录取吗?</h3>
+    			<img src="img/f1.png" />
+    			<p class="explain">看看离你理想的大学还有哪些差距</p>
+    			<button type="button" class="btn btn-warning center">录取条件</button>
+    		</div>
+    		<div class="col-md-4 one-fearure">
+    			<h3>这所学校适合我吗?</h3>
+    			<img src="img/f2.png" />
+    			<p class="explain">看看这所学校与你是否匹配</p>
+    			<button type="button" class="btn btn-warning center">优势专业</button>
+    		</div>
+    		<div class="col-md-4 one-fearure">
+    			<h3>选择专业好难啊!</h3>
+	    		<img src="img/f3.png" />
+				<p class="explain">趣味的专业测试，找到适合自己的专业</p>
+				<a href="quiz.html"><button type="button" class="btn btn-warning center">性格测试</button></a>
+    		</div>
+    	</div>
+    </div>
+    <div class="page-footer">
+    	
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+	
+<struts>
+
+	<constant name="struts.custom.i18n.resources" value="mess"/>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+	<constant name="struts.devMode" value="false" />
+	
+	<package name="lee" namespace="/" extends="struts-default">
+	
+ 		<action name="login"
+			class="model.actions.LoginAction">
+			<result name="success">/index.html</result>
+			<result name="error">/signin.html</result>
+		</action>
+		
+		<action name="regist"
+			class="model.actions.LoginAction">
+			<result name="success">/index.html</result>
+			<result name="error">/regist.html</result>
+		</action>
+		
+		<action name="modifyInformation"
+			class="model.actions.ModifyPersonInfoAction">
+			<result name="success">/index.html</result>
+			<result name="error">/Infomation.html</result>
+		</action>
+		
+		<action name="search"
+			class="model.actions.GetCollegeAction">
+			<result name="success">/index.html</result>
+			<result name="error">/regist.html</result>
+		</action>
+		
+	</package>
+</struts>
