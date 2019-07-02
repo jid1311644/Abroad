@@ -62,6 +62,57 @@ public class MajorBean {
 		return map;
 	}
 	
+	public HashMap<Integer, String> getArtDetail() {
+		HashMap<Integer, String> map = new HashMap<Integer, String>();
+		String sql = "select info from major where major_id = 'M018'";
+		LinkedList<MajorBean> mbs = (LinkedList<MajorBean>) new MajorDAO().query(sql);
+		if(mbs == null || mbs.size() != 1) {
+			return null;
+		}
+		else {
+			String s = mbs.poll().getInfo();
+			String[] ss = s.split("\n");
+			for(int i = 0; i < ss.length; i++) {
+				map.put(i, ss[i]);
+			}
+		}
+		return map;
+	}
+	
+	public HashMap<Integer, String> getNurseDetail() {
+		HashMap<Integer, String> map = new HashMap<Integer, String>();
+		String sql = "select info from major where major_id = 'M001'";
+		LinkedList<MajorBean> mbs = (LinkedList<MajorBean>) new MajorDAO().query(sql);
+		if(mbs == null || mbs.size() != 1) {
+			return null;
+		}
+		else {
+			String s = mbs.poll().getInfo();
+			String[] ss = s.split("\n");
+			for(int i = 0; i < ss.length; i++) {
+				map.put(i, ss[i]);
+			}
+		}
+		return map;
+	}
+	
+	public HashMap<Integer, String> getLawDetail() {
+		HashMap<Integer, String> map = new HashMap<Integer, String>();
+		String sql = "select info from major where major_id = 'M048'";
+		LinkedList<MajorBean> mbs = (LinkedList<MajorBean>) new MajorDAO().query(sql);
+		if(mbs == null || mbs.size() != 1) {
+			return null;
+		}
+		else {
+			String s = mbs.poll().getInfo();
+			String[] ss = s.split("\n");
+			for(int i = 0; i < ss.length; i++) {
+				map.put(i, ss[i]);
+			}
+		}
+		return map;
+	}
+	
 	public String getMajorId() {
 		return majorId;
 	}
@@ -91,6 +142,15 @@ public class MajorBean {
 	}
 	public void setHot(Integer hot) {
 		this.hot = hot;
+	}
+	
+	public static void main(String[] args) {
+		MajorBean mb = new MajorBean();
+		System.out.println(mb.getNurseDetail().toString());
+//		String[] ss = s.split("\n");
+//		for(int i = 0; i < ss.length; i++) {
+//			System.out.println(ss[i]);
+//		}
 	}
 
 }

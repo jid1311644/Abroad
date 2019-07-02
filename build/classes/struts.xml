@@ -13,25 +13,30 @@
 	
  		<action name="login"
 			class="model.actions.LoginAction">
-			<result name="success">/index.html</result>
+			<result name="success">/exit.html</result>
 			<result name="error">/signin.html</result>
 		</action>
 		
 		<action name="regist"
 			class="model.actions.LoginAction">
-			<result name="success">/index.html</result>
+			<result name="success">/exit.html</result>
 			<result name="error">/regist.html</result>
 		</action>
 		
 		<action name="modifyInformation"
 			class="model.actions.ModifyPersonInfoAction">
-			<result name="success">/index.html</result>
-			<result name="error">/Infomation.html</result>
+			<result name="success">/Infomation.jsp</result>
+			<result name="error">/Infomation.jsp</result>
 		</action>
 		
 		<action name="search"
-			class="model.actions.GetCollegeAction">
-			<result name="success">/index.html</result>
+			class="model.actions.SearchCollegeAction">
+			<result name="success">/school.jsp</result>
+			<result name="error">/regist.html</result>
+		</action>
+		<action name="name-search"
+			class="model.actions.SearchCollegeAction">
+			<result name="success">/school.jsp</result>
 			<result name="error">/regist.html</result>
 		</action>
 		

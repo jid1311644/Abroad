@@ -11,6 +11,7 @@
 	<script src="js/bootstrap.min.js"></script>  
     <link rel="stylesheet" href="css/regist.css"/>
     <link rel="stylesheet" href="css/contact.css"/>
+    <script type="text/javascript" src="js/contact.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top"><!--导航在最上面-->
@@ -22,17 +23,21 @@
 	        		<span class="icon-bar"></span>
 	        		<span class="icon-bar"></span>
 	        	</button>
+	        	<a href="index.html" class="navbar-brand"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a> 
 	        	<a href="index.html" class="navbar-brand">FindIt</a> 
         	</div> 	
         	<!--小屏幕导航栏和logo-->
         	<!--导航，在单独的容器层-->
         	<div class="navbar-collapse collapse">
 		    	<ul class="nav navbar-nav navbar-right">
-		    		<li><a href="Infomation.html">个人信息</a></li>
-		    		<li><a href="school.html">学校</a></li>
+		    		<li><a href="Infomation.jsp">个人信息</a></li>
+		    		<li><a href="school.jsp">学校</a></li>
 		    		<li><a href="major.html">专业</a></li>
 		    		<li><a href="guide.html">使用指南</a></li>
 		    		<li><a href="contact.html">联系我们</a></li>
+		    		<li><a href="signin.html" onclick="javascript:return confirm('是否要退出?');"><button type="button"  class="btn btn-danger btn-md wide">退出</button></a><li>
+		    		<li><a href="regist.html"><button type="button" class="btn btn-info btn-md wide"><span class="
+glyphicon glyphicon-user" aria-hidden="true"></span>注册</button></a><li>
 		    	</ul>
     		</div>
     		<!--导航-->
@@ -48,7 +53,7 @@
     	<div class="contact_info">
 			<h3>在这里找到我们 :</h3>
 			   	<div class="map">
-				   	<iframe width="100%" height="175" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265&amp;output=embed"></iframe><br><small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265" style="font-family: 'Open Sans', sans-serif;color:#555555;text-shadow:0 1px 0 #ffffff; text-align:left;font-size:12px;padding: 5px;">View Larger Map</a></small>
+			   		<img src="img/loc.png" />
 				</div>
 	    </div>
 	    <div class="con">	
@@ -68,7 +73,6 @@
 					<div class="contact-form">
 						<hr style="border" />	
 						<div class="information">
-							<form action="regist.sc" name="RegistForm" class="form-signin">
 								<div class="col-lg-12">
 									<div class="input-group input-group-lg space-line">
 									    <span class="input-group-addon" id="sizing-addon1">您的电话号码</span>									  <input type="text" class="form-control length" placeholder="请输入电话号码 " aria-describedby="sizing-addon1">
@@ -83,17 +87,149 @@
 									</div>
 									<div class="form-group">
 										<h3 for="name">正文</h3>
-										<input type="text" class="form-control length" id="name" placeholder="请输入正文">
+										<input type="text" class="form-control length" id="name" placeholder="请输入正文" aria-describedby="sizing-addon1">
 									</div>
-									<p><a href="#" class="btn btn-primary" role="button">确认提交</a></p>
+									<p><button class="btn btn-primary"  onclick="myFunction()" type="submit">确认提交</button></p>
 				  				</div><!-- /.col-lg-6 -->
-							</form>
 						</div>
 					</div>
     			</div>
     	</div>	
     <div class="page-footer">
-    	
+    	<div class="footer-nav">
+    		<p class="h4">快速导航</p><br />
+    		<ul>
+    			<li><a class="footer-list" href="Infomation.jsp">个人信息</a></li><br />
+		    	<li><a class="footer-list" href="school.jsp">学校</a></li><br />
+		    	<li><a class="footer-list" href="major.html">专业</a></li><br />
+		    	<li><a class="footer-list" href="guide.html">使用指南</a></li><br />
+		    	<li><a class="footer-list" href="contact.html">联系我们</a></li><br />
+    		</ul>
+    		<div class="con-icon">
+    			<button type="button" class="btn btn-default btn-md">
+			    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+				</button>
+				<button type="button" class="btn btn-default btn-md">
+				    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+				</button>
+				<button type="button" class="btn btn-default btn-md">
+				    <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+				</button>
+				<button type="button" class="btn btn-default btn-md">
+				    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+				</button>
+    		</div>
+    	</div>
+    	<div class="hot-school">
+    		<div class="all">
+    			<p class="h4">知名大学一览</p>
+    		</div>
+    		<div class="country">
+    			<p class="h5">美国</p><br />
+    			<ul>
+	    			<li><a class="footer-list" href="#">普林斯顿大学</a></li>
+	    			<li><a class="footer-list" href="#">哈佛大学</a></li>
+	    			<li><a class="footer-list" href="#">耶鲁大学</a></li>
+	    			<li><a class="footer-list" href="#">哥伦比亚大学</a></li>
+	    			<li><a class="footer-list" href="#">斯坦福大学</a></li>
+	    			<li><a class="footer-list" href="#">芝加哥大学</a></li>
+	    			<li><a class="footer-list" href="#">麻省理工学院</a></li>
+	    			<li><a class="footer-list" href="#">杜克大学</a></li>
+	    			<li><a class="footer-list" href="#">宾夕法尼亚大学</a></li>
+	    			<li><a class="footer-list" href="#">加州理工学院</a></li>
+	    		</ul>
+    		</div>
+    		<div class="country">
+    			<p class="h5">澳大利亚</p><br />
+    			<ul>
+	    			<li><a class="footer-list" href="#">墨尔本大学</a></li>
+	    			<li><a class="footer-list" href="#">悉尼大学</a></li>
+	    			<li><a class="footer-list" href="#">澳大利亚昆士兰大学</a></li>
+	    			<li><a class="footer-list" href="#">蒙纳士大学</a></li>
+	    			<li><a class="footer-list" href="#">澳大利亚国立大学</a></li>
+	    			<li><a class="footer-list" href="#">新南威尔士大学</a></li>
+	    			<li><a class="footer-list" href="#">西澳大利亚大学</a></li>
+	    			<li><a class="footer-list" href="#">阿德莱德大学</a></li>
+	    			<li><a class="footer-list" href="#">科廷科技大学</a></li>
+	    			<li><a class="footer-list" href="#">麦考瑞大学</a></li>
+	    		</ul>
+    		</div>
+    		<div class="country">
+    			<p class="h5">英国</p><br />
+    			<ul>
+	    			<li><a class="footer-list" href="#">剑桥大学</a></li>
+	    			<li><a class="footer-list" href="#">牛津大学</a></li>
+	    			<li><a class="footer-list" href="#">帝国理工大学</a></li>
+	    			<li><a class="footer-list" href="#">伦敦大学</a></li>
+	    			<li><a class="footer-list" href="#">拉夫堡大学</a></li>
+	    			<li><a class="footer-list" href="#">圣安德鲁斯大学</a></li>
+	    			<li><a class="footer-list" href="#">杜伦大学</a></li>
+	    			<li><a class="footer-list" href="#">华威大学</a></li>
+	    			<li><a class="footer-list" href="#">埃克塞特大学</a></li>
+	    			<li><a class="footer-list" href="#">伦敦政治经济学院</a></li>
+	    		</ul>
+    		</div>
+    		<div class="country">
+    			<p class="h5">韩国</p><br />
+    			<ul>
+	    			<li><a class="footer-list" href="#">首尔大学</a></li>
+	    			<li><a class="footer-list" href="#">成均馆大学</a></li>
+	    			<li><a class="footer-list" href="#">汉阳大学</a></li>
+	    			<li><a class="footer-list" href="#">高丽大学</a></li>
+	    			<li><a class="footer-list" href="#">延世大学</a></li>
+	    			<li><a class="footer-list" href="#">庆熙大学</a></li>
+	    			<li><a class="footer-list" href="#">西江大学</a></li>
+	    			<li><a class="footer-list" href="#">汉阳大学</a></li>
+	    			<li><a class="footer-list" href="#">汉阳大学</a></li>
+	    			<li><a class="footer-list" href="#">韩国外国语大学</a></li>
+	    		</ul>
+    		</div>
+    		<div class="country">
+    			<p class="h5">日本</p><br />
+    			<ul>
+	    			<li><a class="footer-list" href="#">东京大学</a></li>
+	    			<li><a class="footer-list" href="#">京都大学</a></li>
+	    			<li><a class="footer-list" href="#">大阪大学</a></li>
+	    			<li><a class="footer-list" href="#">东京工业大学</a></li>
+	    			<li><a class="footer-list" href="#">东北大学</a></li>
+	    			<li><a class="footer-list" href="#">名古屋大学</a></li>
+	    			<li><a class="footer-list" href="#">北海道大学</a></li>
+	    			<li><a class="footer-list" href="#">九州大学</a></li>
+	    			<li><a class="footer-list" href="#">庆应义塾大学</a></li>
+	    			<li><a class="footer-list" href="#">早稻田大学</a></li>
+	    		</ul>
+    		</div>
+    		<div class="country">
+    			<p class="h5">德国</p><br />
+    			<ul>
+	    			<li><a class="footer-list" href="#">慕尼黑大学</a></li>
+	    			<li><a class="footer-list" href="#">慕尼黑工业大学</a></li>
+	    			<li><a class="footer-list" href="#">海德堡大学</a></li>
+	    			<li><a class="footer-list" href="#">柏林洪堡大学</a></li>
+	    			<li><a class="footer-list" href="#">亚琛工业大学</a></li>
+	    			<li><a class="footer-list" href="#">弗莱堡大学</a></li>
+	    			<li><a class="footer-list" href="#">柏林自由大学</a></li>
+	    			<li><a class="footer-list" href="#">柏林工业大学</a></li>
+	    			<li><a class="footer-list" href="#">图灵根大学</a></li>
+	    			<li><a class="footer-list" href="#">波恩大学</a></li>
+	    		</ul>
+    		</div>
+    		<div class="country">
+    			<p class="h5">新加坡</p><br />
+    			<ul>
+	    			<li><a class="footer-list" href="#">新加坡管理学院</a></li>
+	    			<li><a class="footer-list" href="#">新加坡管理发展学院</a></li>
+	    			<li><a class="footer-list" href="#">新加坡PSB学院</a></li>
+	    			<li><a class="footer-list" href="#">新加坡设计与科技学院</a></li>
+	    			<li><a class="footer-list" href="#">新加坡商学院</a></li>
+	    			<li><a class="footer-list" href="#">新加坡东亚管理学院</a></li>
+	    			<li><a class="footer-list" href="#">新加坡亚太商学院</a></li>
+	    			<li><a class="footer-list" href="#">新加坡英华美学院</a></li>
+	    			<li><a class="footer-list" href="#">新加坡FTC培训中心</a></li>
+	    			<li><a class="footer-list" href="#">新加坡TMC学院</a></li>
+	    		</ul>
+    		</div>
+    	</div>
     </div>
 </body>
 </html>

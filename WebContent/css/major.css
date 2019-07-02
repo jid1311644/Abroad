@@ -8,9 +8,11 @@
 .list{
 	margin-left: 50px;
 	margin-bottom: 70px;
+	height: 500px;
 }
 .table{
-	width: 70%;
+	width: 60%;
+	float: left;
 }
 .text-size{
 	font-size: 15px;
@@ -27,7 +29,7 @@
 	height: 350px;
 }
 .set{
-	height: 400px;
+	height: 420px;
 }
 .even{
 	background-color: #f8f7f5;
@@ -36,11 +38,15 @@
 	background-color: #e3ded5;
 }
 .major-class{
-	margin: 40px 40px;
+	margin: 20px 40px;
+	height: 230px;
 }
-.block{
-	height: 300px;
+.thumbnail{
+	margin: 0px 30px 10px 43px;
 	width: 400px;
+	height: 230px;
+	display: inline-block;
+	float: left;
 }
 .title-size{
 	text-align: center;
@@ -51,4 +57,25 @@
 	text-align: center;
 	font-size: 15px;
 	margin-top: 20px;
+}
+.class-note{
+	padding-top: 10px;
+	margin-left: 75px;
+}
+h3{
+	font-size: 25px;
+	color: grey;
+	font-weight: bold;
+}
+img{
+	margin-left: 100px;
+	margin-bottom: 10px;
+	float: left;
+}
+.pic-name{
+	line-height: 30px;
+	font-size: 20px;
+	font: "微软雅黑";
+	color: cadetblue;
+	font-weight: bold;
 }

@@ -144,14 +144,14 @@ public class CollegeBean {
 
 	
 	public LinkedList<CollegeBean> search(String keyword){
-		String sql = "select college_id from college "
-				+ "where name = '" + keyword + "'";
+		String sql = "select * from college "
+				+ "where name like '%" + keyword + "%' order by score limit 6";
 		return (LinkedList<CollegeBean>) new CollegeDAO().query(sql);
 	}
 	
 	//type
 	public LinkedList<CollegeBean> search(HashMap<String, String> conditions){
-		String sql = "select college_id from college where ";
+		String sql = "select * from college where ";
 		for(Map.Entry<String, String> e: conditions.entrySet()) {
 			if(e.getKey().equals("address")) {
 				String[] values = e.getValue().split(",");
@@ -176,7 +176,7 @@ public class CollegeBean {
 			}
 			else if(e.getKey().equals("scores")){
 				String[] values = e.getValue().split(",");
-				sql += "college_id = (select college_id from college_exam where exam_id = "
+				sql += "college_id in (select college_id from college_exam where exam_id = "
 						+ "(select exam_id from exam where name = '" + values[0] + "') and "
 						+ "pass_score <= " + values[1] + ")"
 						+ " \nand ";
@@ -188,7 +188,9 @@ public class CollegeBean {
 						+ " \nand ";
 			}
 			else if(e.getKey().equals("price")) {
-				sql += "tuition_in_state <= " + e.getValue()
+				String[] values = e.getValue().split(",");
+				sql += "tuition_out_of_state >= " + values[0] + " and "
+						+ "tuition_out_of_state <= " + values[1]
 						+ " \nand ";
 			}
 			else {
@@ -196,10 +198,15 @@ public class CollegeBean {
 						+ " \nand ";
 			}
 		}
-		sql = sql.substring(0, sql.length() - 6);
+		sql = sql.substring(0, sql.length() - 6) + " order by score limit 6";
 		return (LinkedList<CollegeBean>) new CollegeDAO().query(sql);
 	}
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "(" + getCollegeId() + "," + getName() + ")";
+	}
 	
 	public String getCollegeId() {
 		return collegeId;

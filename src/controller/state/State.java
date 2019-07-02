@@ -3,9 +3,9 @@ package controller.state;
 public final class State {
 
 	private static boolean isLogged = false;
-	private static String currentUser = "new@qq.com";
-	private static String currentCollege = "";
-	private static String currentMajor = "";
+	private static String currentUser;
+	private static String currentCollege;
+	private static String currentMajor;
 	
 	
 	public static boolean isLogged() {

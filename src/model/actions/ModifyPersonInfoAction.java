@@ -16,9 +16,9 @@ public class ModifyPersonInfoAction extends ActionSupport {
 	public String execute() throws Exception {
 		System.out.print("action:modify	");
 		if(new UserBean().modify(getEducation(), getSchoolName(), 
-				getAddress(), getGpa(), getTestType(), getScore())) {
+				getAddress(), getGpa(), getTestType().toUpperCase(), getScore())) {
 			System.out.println(SUCCESS);
-			return SUCCESS;
+			return NONE;
 		}
 		System.out.println(ERROR);
 		return ERROR;

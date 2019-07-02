@@ -2,6 +2,13 @@ body{
 	font-family: "microsoft yahei",sans-serif;
 	height: auto;
 }
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+	color: orange;
+}
 .navbar-default{
 	background-color: #fff;
     border: none;
@@ -14,12 +21,12 @@ body{
     height: 70px;
     line-height: 35px;
 }
-.navbar-default .navbar-nav>li>a {
-    color: #666;
+.navbar-inverse .navbar-nav>li>a {
+    color: whitesmoke;
     font-size: 16px;
     height: 70px;
     line-height: 35px;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
     background-color: #1a7660;
@@ -52,7 +59,7 @@ body{
 	display: inline-block;
 }
 .page-footer{
-	height: 300px;
+	height: 400px;
 	background-color: rgba(0,0,0,0.8);
 }
 .center{
@@ -62,7 +69,7 @@ body{
 }
 .features{
 	background-color: #f8f7f5;
-	height: 600px;
+	height: 550px;
 }
 .one-fearure{
 	height: 400px;
@@ -75,4 +82,45 @@ body{
 }
 .explain{
 	height: 30px;
+}
+.wide{
+	width: 70px;
+}
+.h4{
+	margin-left: 40px;
+	font: "微软雅黑";
+	color: orange;
+	font-weight: bold;
+}
+.all{
+	margin-left: 30px;
+}
+.h5{
+	margin-left: 40px;
+	color: white;
+	font: "微软雅黑";
+	font-weight: bold;
+}
+.footer-list{                                                                                            ;
+	color: white;
+}
+.footer-nav{
+	width: 220px;
+	margin-top: 40px;
+	margin-left: 40px;
+	display: inline-block;
+	float: left;
+}
+.con-icon{
+	margin-left: 40px;
+}
+.hot-school{
+	margin-top: 40px;
+	display: inline-block;
+	float: left;
+}
+.country{
+	display: inline-block;
+	float: left;
+	margin-left: 30px;
 }

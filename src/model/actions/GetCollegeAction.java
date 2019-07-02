@@ -11,11 +11,10 @@ import com.google.gson.Gson;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
-import controller.tools.ResultToJson;
 import model.db.college.CollegeBean;
 import model.db.major.MajorBean;
 
-public class GetCollegeAction extends ActionSupport implements ServletResponseAware {
+public class GetCollegeAction extends ActionSupport {
 	
 	public String execute() throws Exception {
 		
@@ -71,12 +70,6 @@ public class GetCollegeAction extends ActionSupport implements ServletResponseAw
 		//
 		System.out.println(res.toString());
 		return SUCCESS;
-	}
-
-	@Override
-	public void setServletResponse(HttpServletResponse arg0) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }

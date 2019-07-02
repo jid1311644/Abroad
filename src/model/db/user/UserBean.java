@@ -3,6 +3,7 @@ package model.db.user;
 import java.util.LinkedList;
 
 import controller.state.State;
+import model.db.user_exam.UserExamBean;
 import model.db.user_exam.UserExamDAO;
 
 public class UserBean {
@@ -43,9 +44,9 @@ public class UserBean {
 		if(schoolName != null && !schoolName.equals("")) {
 			sql += "college = '" + schoolName + "' , ";
 		}
-		if(address != null && !address.equals("")) {
-			sql += "address = '" + address + "' , ";
-		}
+//		if(address != null && !address.equals("")) {
+//			sql += "address = '" + address + "' , ";
+//		}
 		if(gpa != null && !gpa.equals("")) {
 			sql += "gpa = " + gpa + " , ";
 		}
@@ -57,15 +58,37 @@ public class UserBean {
 		}
 		
 		String sql0 = "";
+		boolean f2 = false;
 		if(testType != null && !testType.equals("") && score != null && !score.equals("")) {
-			sql0 = "insert into user_exam values('" + State.getCurrentUser() + "' , '" + testType + "' , '" + score + "')";
-		}
-		boolean f2 = true;
-		if(!sql0.equals("")) {
-			f2 = new UserExamDAO().insert(sql0);
+			testType.toUpperCase();
+			if(testType.equals("SAT") || testType.equals("ACT")) {
+				testType = testType.equals("SAT")? "E003" : "E004";
+				sql0 = "select exam_id from user_exam where email = '" + State.getCurrentUser() + "' and exam_id = '" + testType + "'";
+				LinkedList<UserExamBean> uebs = (LinkedList<UserExamBean>) new UserExamDAO().query(sql0);
+				if(uebs == null || uebs.isEmpty()) {
+					sql0 = "insert into user_exam values('" + State.getCurrentUser() + "' , '" + testType + "' , '" + score + "')";	
+					
+				}
+				else {
+					sql0 = "UPDATE `study_abroad`.`user_exam` SET `score` = "
+							+ "'" + score + "' WHERE "
+							+ "(`email` = '" + State.getCurrentUser() + "') and "
+							+ "(`exam_id` = '" + testType + "')";
+				}
+				f2 = new UserExamDAO().insert(sql0);
+			}
 		}
 		
 		return f1 && f2;
+	}
+	
+	public UserBean getUser(String email) {
+		String sql = "select * from user where email='" + email + "'";
+		LinkedList<UserBean> userBeans = (LinkedList<UserBean>) new UserDAO().query(sql);
+		if(userBeans.size() == 1) {
+			return userBeans.poll();
+		}
+		return null;
 	}
 	
 	public String getEmail() {
